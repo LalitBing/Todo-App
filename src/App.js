@@ -40,7 +40,6 @@ function App() {
     setName("");
   };
 
-  console.log(todos);
   return (
     <>
       <form onSubmit={handleSubmit}>
