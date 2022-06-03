@@ -5,6 +5,7 @@ export const ACTIONS = {
   ADD_TODO: "add-todo",
   TOGGLE_TODO: "toggle-todo",
   DELETE_TODO: "delete-todo",
+  RESET_TODO: "reset-todo",
 };
 function App() {
   const [name, setName] = useState("");
@@ -23,6 +24,9 @@ function App() {
         });
       case ACTIONS.DELETE_TODO:
         return todos.filter((todo) => todo.id !== action.payload.id);
+
+      default:
+        return todos;
     }
   }
 
